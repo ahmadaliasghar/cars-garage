@@ -3,7 +3,8 @@
 import Image from "next/image";
 import React, { useState } from "react";
 import { useRouter } from "next/navigation";
-import {SearchManufacturer} from "../components";
+
+import SearchManufacturer from "./SearchManuafacturer";
 
 const SearchButton = ({ otherClasses }: { otherClasses: string }) => (
   <button type='submit' className={`-ml-3 z-10 ${otherClasses}`}>
@@ -64,9 +65,9 @@ const SearchBar = () => {
           manufacturer={manufacturer}
           setManuFacturer={setManuFacturer}
         />
-        {/* <SearchButton otherClasses='sm:hidden' /> */}
+        <SearchButton otherClasses='sm:hidden' />
       </div>
-      {/* <div className='searchbar__item'>
+      <div className='searchbar__item'>
         <Image
           src='/model-icon.png'
           width={25}
@@ -83,8 +84,8 @@ const SearchBar = () => {
           className='searchbar__input'
         />
         <SearchButton otherClasses='sm:hidden' />
-      </div> */}
-      {/* <SearchButton otherClasses='max-sm:hidden' /> */}
+      </div>
+      <SearchButton otherClasses='max-sm:hidden' />
     </form>
   );
 };
